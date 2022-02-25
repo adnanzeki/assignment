@@ -1,0 +1,21 @@
+a = input("please enter your number :")
+b = list(a)
+c = len(a)
+list1 = []
+set1 = set("0123456789")
+set2 = set(a)
+if (set2 - set1) != set():
+    print("It is an invalid entry. Don't use non-numeric, float, or negative values!")
+elif float(a) % 1 != 0:
+    print("It is an invalid entry. Don't use non-numeric, float, or negative values!")
+elif int(a) > 0:
+    for i in range(c-1,-1,-1):
+     list1.append(int(b[i])**int(len(a)))
+    if sum(list1) == int(a):
+     print(f"{a} is and armstrong number !")
+    elif int(a) > 0:
+     print(f"{a} in NOT armstrong number !")
+    else:
+     print("try again")  
+else:
+    print("It is an invalid entry. Don't use non-numeric, float, or negative values!")
